@@ -12,14 +12,24 @@
             <img class="img-fluid" src="http://127.0.0.1:5000/static/group.jpg">
             <h2 class="text-center">Get start</h2>
             
-            <div class="text-center mt-4">
+            <div class="text-center mt-4" style="margin-bottom: 70px;">
                 <button type="button" class="btn btn-primary btn-lg">Start</button>
             </div>
 
-            <div>
+            <div class="row">
                 {% for project in projects %}
-                    <div>{{project['pname']}}</div>
+                
+                <div class="col-8">
+                    <div>Project Name : {{project['pname']}} </div>
+                    <div class="border-bottom" style="margin-bottom: 20px; padding-bottom: 10px;"><b>Project ID </b> {{project['pID']}}</div>
+                </div>
+
+                <div class="col-4">
+                    <button type="button" class="btn btn-outline-primary">Detail</button>
+                </div>
+
                 {% endfor %}
+                    
             </div>
 
             <h2 class="text-center mt-4 mb-4">About site</h2>
